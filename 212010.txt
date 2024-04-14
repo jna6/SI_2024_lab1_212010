@@ -1,0 +1,38 @@
+1. Инсталација од https://git-scm.com
+3. Kликање на копчето new repository на GitHub
+4.git init
+5.git remote add origin https://github.com/jna6/SI_2024_lab1_212010.git
+6.echo "Jana Ilijoska 212010" > README.md
+git add README.md
+git commit -m "Initial commit"
+7.git add SILab1Main.java SILab1_1.java SILab1_2.java
+git commit -m "Add starter code"
+8.git push origin master
+
+9/10.git checkout -b bug1
+11.git add SILab1_1.java
+git commit -m " Fix wrong condition in filterOddLengthStrings"
+12.git checkout -b bug2
+13.git add SILab1_2.java
+git commit -m " Fix wrong condition in makeBigStringFrom"
+14.git checkout bug1
+15.git add SILab1Main.java
+git commit -m "Call method filterOddLengthStrings in main class"
+16.git checkout bug2
+17.git add SILab1Main.java
+git commit -m "Call method makeBigStringFrom in main class"
+18.git push --all
+19.git checkout master
+20.git merge bug1
+21.git push origin master
+22.git checkout bug2
+23.git rebase master
+git add SILab1Main.java
+git rebase --continue
+git push --force --all origin
+24.git checkout master
+25.git merge bug2
+26/27.git push origin master
+28.git add logs.txt 212010.txt
+git commit -m "Final commit"
+29.git push origin master
